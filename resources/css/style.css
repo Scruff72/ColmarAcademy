@@ -3,55 +3,542 @@ html {
 }
 
 body {
-	line-height: 1.2;
-	font-family: helvetica;
+	font-family: "Work Sans", sans-serif, arial;
 }
 
-.text-color {
-	color: slategray;
-}
-.logo-bold {
-	font-weight: bold;
-}
+/******************/
+/* GENERIC STYLES */
+/******************/
 
-/**********************/
-/* HEADER SECTION     */
-/**********************/
-
-.responsive-nav-links{
+.courses-mobile {
 	display: none;
 }
 
+.large-img-container {
+	width: 60%;
+}
+
+.large-img-full-width {
+	max-width: 100%;
+}
+
+.large-img-padding {
+	padding: 2rem 1.5rem;
+}
+
+.small-img-container {
+	width: 40%;
+}
+
+.small-img-full-width {
+	max-width: 100%;
+}
+
+.small-img-padding {
+	padding: 1rem 1rem;
+}
+
+.text-padding {
+	padding: 0.5rem 0;
+}
+
+.light-text {
+	font-weight: 300;
+}
+
+.rounded-border {
+	border-radius: 5px;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+
+	.rounded-border {
+		border-radius: 0;
+	}
+}
+
+/******************/
+/* HEADER SECTION */
+/******************/
+
 header {
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+  z-index: 1;
+  height: 4rem;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+header .logo {
+  flex: 1;
+}
+
+header nav ul {
+  display: flex;
+}
+
+nav li {
+  padding-left: 3.5rem;
+}
+
+nav a {
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+header .icon {
+  width: 1rem;
+  padding-left: 1.5rem;
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+
+  header .desktop {
+    display: none;
+  }
+
+  .content span {
+  	display: none;
+  }
+
+  header .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  header .content {
+    padding: 1rem 0;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .mobile li {
+    padding: 0;
+  }
+}
+
+/******************/
+/* BANNER SECTION */
+/******************/
+
+.banner {
+	padding-top: 4rem;
+	display: flex;
+	background-color: rgb(216, 216, 216);
+}
+
+.banner-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.banner-info {
+	padding-right: 8.5rem;
+	padding-left: 1rem;
+}
+
+.banner-info h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	opacity: 0.6;
+}
+
+.banner-info p {
+	font-size: 1.75rem;
+	padding-top: 3rem;
+	padding-right: 3rem;
+	opacity: 0.6;
+}
+
+.start-here {
+	background-color: rgb(74, 74, 74);
+	text-align: center;
+	color: white;
+	padding: 1rem 0;
+	border-radius: 5px;
+	margin-top: 3.5rem;
+	font-size: 1.25rem;
+}
+
+.start-here span a {
+	color: white;
+}
+
+.start-here span a:hover {
+	color: lawngreen;
+	transition: color ease-out 500ms;
+}
+
+@media only screen and (max-width: 500px) {
+
+	.large-img-padding {
+		padding: 0;
+	}
+
+	.large-img-container {
+		width: 100%;
+	}
+
+	.small-img-container {
+		width: 100%;
+	}
+
+	.banner-info {
+		padding: 2rem 3rem;
+	}
+
+	.banner-info h1 {
+		font-size: 2.75rem;
+		margin-bottom: 1rem;
+	}
+
+	.banner-info p {
+		margin-bottom: 1.5rem;
+		font-size: 1.5rem;
+	}
+
+	.banner {
+		flex-direction: column;
+	}
+
+	.start-here {
+		width: 100%;
+	}
+}
+
+/***********************/
+/* INFORMATION SECTION */
+/***********************/
+
+.information {
+	display: flex;
+}
+
+.information-left {
+	border-right: 0.25px solid lightgrey;
+}
+
+.information-left-content {
+	display: flex;
+	flex-direction: column;
+	padding-top: 2rem;
+}
+
+.information-left-content h2 {
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+
+.information-left-content p {
+	padding: 1.5rem 1.5rem 2.5rem 0;
+}
+
+.information-sidebar {
+	width: 40%;
+	padding-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.info {
+	display: flex;
+}
+
+.info-image {
+	width: 35%;
+}
+
+.info-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.info-text {
+	width: 65%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.info-text h3, .info-text span, .info-text a {
+	padding: 0.5rem;
+	font-family: "Work Sans", "helvetica", serif;
+}
+
+.info-text h3 {
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+.info-text a:hover {
+	width: 5.25rem;
+	background-color: #4969E1;
+	border: 1px solid white;
+	color: white;
+	border-radius: 5px;
+	transition: background-color ease-out 500ms, color ease-out 1s;
+}
+
+.orientation {
+	border-bottom: 0.5px solid lightgray;
+	border-top: 0.5px solid lightgray;
+}
+
+.campus {
+	border-top: 0.5px solid lightgray;
+	margin-top: 1px;
+}
+
+.guest-lecture {
+	background-color: rgb(216, 216, 216);
+}
+
+@media only screen and (max-width: 500px) {
+
+	.information-left {
+		display: none;
+	}
+
+	.information-sidebar {
+		width: 100%;
+		padding: 0 1.5rem 0 0;
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding-top: 3rem;
+	}
+
+	.info-text a:hover {
+		width: auto;
+		background-color: white;
+		border: none;
+		color: blue;
+		border-radius: 0;
+		transition: color ease-out 500ms;
+	}
+
+	.guest-lecture {
+		background: none;
+	}
+
+	.orientation, .campus {
+		border: none;
+	}
+}
+
+/*******************/
+/* COURSES SECTION */
+/*******************/
+
+.courses {
+	background-color: rgb(216, 216, 216);
+	padding: 0 4.5rem 4.5rem 4.5rem;
+	font-family: "Work Sans", "helvetica", serif
+}
+
+.courses h2 {
+	font-size: 2.5rem;
+	font-weight: 800;
+	text-align: center;
+	padding: 2rem 0;
+}
+
+.courses-cards {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.course {
+	width: 30%;
+	background-color: white;
+	margin-bottom: 2rem;
+}
+
+.course-image {
+	width: 100%;
+}
+
+.course-image img {
+	max-width: 100%;
+}
+.course-text {
+	text-align: left;
+	padding: 1rem 1rem;
+}
+
+.course-text h3, .course-text span, .course-text p {
+	padding: 0.5rem;
+}
+
+.course h3 {
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 500px) {
+
+	.courses {
+		display: none;
+	}
+
+	.courses-mobile h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		text-align: center;
+		padding: 2rem 1rem 2rem 0;
+	}
+
+	.courses-mobile {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		text-align: left; 
+	}
+
+	.courses-mobile div {
+		margin: 0.5rem 0;
+		padding: 1rem 1rem 1.5rem 1rem;
+		background-color: rgb(216, 216, 216);
+		border-radius: 5px;
+	}
+
+	.courses-mobile div span {
+		font-size: 1.5rem;
+		font-weight: 500;
+		opacity: 0.7;
+	}
+
+	.courses-mobile div:hover {
+		background-color: royalblue;
+		color: white;
+		/* This hover transition will only work when viewed on a desktop with the screen minimised to < 500px*/
+		transition: background-color ease-out 500ms, color ease-out 500ms;
+	}
+}
+
+/******************/
+/* THESIS SECTION */
+/******************/
+
+.thesis video {
+	max-width: 100%;
+	height: auto;
+	background-color: rgb(216, 216, 216);
+}
+
+.thesis {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
+
+.thesis .information-left {
+	border: none;
+}
+
+.thesis .orientation {
+	border: none;
+}
+
+.title {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.5rem;
+	padding: 2rem 0;
+}
+
+.thesis-content {
+	display: flex;
+}
+
+.thesis .information-sidebar {
+	padding-top: 2rem;
+}
+
+.thesis-sidebar .info {
+	border-left: none;
+}
+
+@media only screen and (max-width: 500px) {
+
+	.thesis .information-sidebar {
+		display: none;
+	}
+
+	.these .large-img-padding {
+		padding: 0;
+	}
+
+	.thesis .large-img-container {
+		width: 100%;
+	}
+
+	.thesis .information-left {
+		display: block;
+		width: 100%;
+		background: none;
+	}
+
+	.thesis .information-left-content {
+		display: none;
+	}
+
+	.thesis .title {
+		font-size: 2rem;
+	}
+
+}
+
+/******************/
+/* FOOTER SECTION */
+/******************/
+
+footer {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	height: 4rem;
-	padding-left: 1.5rem;
+	padding: 1rem 1.5rem;
 }
 
-nav ul {
-	display: flex;
+.legal span, .copyright {
+	opacity: 0.5;
 }
 
-nav ul a {
-	margin-right: 1.5rem;
+.legal span a {
 	color: black;
-	text-decoration: none;
+	padding: 1rem;
 }
 
-.logo {
-	height: 2rem;
-	display: flex;
-	align-items: center;
+@media only screen and (max-width: 500px) {
+
+	footer .legal {
+		display: none;
+	}
 }
-
-.logo img {
-	height: 100%;
-}
-
-
-
-
-
-

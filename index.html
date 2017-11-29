@@ -6,27 +6,247 @@
 	<title>Colmar Academy</title>
 	<link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 </head>
 <body>
-	<!-- Header section containing logo and main navigation -->
+
+	<!-- HEADER SECTION -->
+	
 	<header>
-		<div class="logo">
-			<img src="./resources/media/images/ic-logo.svg" alt="Colmar Academy Logo">
-			<span class="logo-bold">COLMAR</span><span class="text-color">ACADEMY</span>
+    	<div class="content">
+	      	<a href="index.html" class="desktop"><img src="./resources/media/images/ic-logo.svg" alt="Colmar Academy Logo"></a>
+	      	<span>COLMAR</span><span class="logo">ACADEMY</span>
+	      	<nav class="desktop">
+	        	<ul>
+	          		<li><a class="text-color" href="#">On Campus</a></li>
+					<li><a class="text-color" href="#">Online</a></li>
+					<li><a class="text-color" href="#">Our Companies</a></li>
+					<li><a class="text-color" href="#">Sign in</a></li>
+	        	</ul>
+	      	</nav>
+	      	<nav class="mobile">
+		        <ul>
+		        	<li><a href="index.html"><img src="./resources/media/images/ic-logo.svg" alt="Colmar Academy Logo"></a></li>
+		          	<li><a href="#"><img src="./resources/media/images/ic-on-campus.svg"></a></li>
+		          	<li><a href="#"><img src="./resources/media/images/ic-online.svg"></a></li>
+		          	<li><a href="#"><img src="./resources/media/images/ic-login.svg"></a></li>
+		        </ul>
+	      	</nav>
+    	</div>
+  	</header>
+
+  	<!-- BANNER SECTION -->
+
+  	<div class="banner">
+		<div class="large-img-container large-img-padding">
+			<img class="large-img-full-width rounded-border" src="./resources/media/images/banner.jpg" alt="A picture of pople studying together on an outdoor table">
 		</div>
-		<nav>
-			<ul class="nav-links">
-				<li><a class="text-color" href="#">On Campus</a></li>
-				<li><a class="text-color" href="#">Online</a></li>
-				<li><a class="text-color" href="#">Our Companies</a></li>
-				<li><a class="text-color" href="#">Sign in</a></li>
-			</ul>
-			<ul class="responsive-nav-links">
-				<li><a href="#"><img src="./resources/media/images/ic-on-campus.svg" alt="On Campus Icon"></a></li>
-				<li><a href="#"><img src="./resources/media/images/ic-online.svg" alt="Online Icon"></a></li>
-				<li><a href="#"><img src="./resources/media/images/ic-login.svg" alt="Sign in Icon"></a></li>
-			</ul>
-		</nav>
-	</header> <!-- End Header Section -->
+		<div class="banner-content small-img-container">
+			<div class="banner-info">
+				<h1>Learn something <br>new everyday</h1>
+				<p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p>
+				<div class="start-here">
+					<span><a href="#">Start here</a></span>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<!-- INFORMATION SECTION -->
+
+	<div class="information">
+		<div class="information-left large-img-container large-img-padding">
+			<div class="large-img-full-width">
+				<img class="large-img-full-width rounded-border" src="./resources/media/images/information-main.jpg" alt="A picture of a guy smiling while reading">
+			</div>
+
+			<div class="large-image-full-width information-left-content">
+				<h2>It doesn't hurt to keep practicing</h2>
+				<p class="text-padding light-text">"Ex feugait adipisci ocurreret nec, tantas tempor ei ius. Est alii persecuti pertinacia ne, ei vis civibus interesset. Vix congue oblique voluptua an, ei sea nibh dictas interesset. Ex sed audiam noluisse. Mel eu debet phaedrum. Ex feugait adipisci ocurreret nec, tantas tempor ei ius."</p>
+				<span class="light-text">Emanuel, Sir Strategist at Hiring.com</span>
+			</div>
+		</div>
+
+		<div class="information-sidebar">
+			<div class="info orientation">
+				<div class="info-image small-img-padding border">
+					<img class="circle" src="./resources/media/images/information-orientation.jpg" alt=" Poeple walking to orientation">
+				</div>
+				<div class="info-text">
+					<h3>Orientation Date</h3>
+					<span class="light-text">Tue 10/11 &amp; Wed 10/12: 8am-3pm</span>
+					<a href="#" class="light-text">Read more</a>
+				</div>
+			</div>
+			<div class="info campus">
+				<div class="info-image small-img-padding border">
+					<img class="circle" src="./resources/media/images/information-campus.jpg" alt="Students studying on campus">
+				</div>
+				<div class="info-text">
+					<h3>Our Campus</h3>
+					<span class="light-text">Find which campus is close by you</span>
+					<a href="#" class="light-text">Read more</a>
+				</div>
+			</div>
+			<div class="info guest-lecture">
+				<div class="info-image small-img-padding border">
+					<img class="circle" src="./resources/media/images/information-guest-lecture.jpg" alt="A photo of a guest lecturer">
+				</div>
+				<div class="info-text">
+					<h3>Our Guest Lecture</h3>
+					<span class="light-text">Join a keynote with Oliver Slack about music in medical treatment</span>
+					<a href="#" class="light-text">Read more</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- COURSES SECTION -->
+
+	<div class="courses">
+		<h2>Start Learning</h2>
+		<div class="courses-cards">
+			<div class="course">
+				<div class="course-image">
+					<img src="./resources/media/images/course-software.jpg" alt="A computer used for software engineering">
+				</div>
+				<div class="course-text">
+					<h3>Software Engineering</h3>
+					<span class="light-text">COURSES</span>
+					<p class="light-text">Web Development, Mobile Development, iOT, API's</p>
+				</div>
+			</div>
+			<div class="course">
+				<div class="course-image">
+					<img src="./resources/media/images/course-computer-art.jpg" alt="An image of a phone representing computer art">
+				</div>
+				<div class="course-text">
+					<h3>Computer Art</h3>
+					<span class="light-text">COURSES</span>
+					<p class="light-text">Imaging and Design, Web Design, Motion Graphics and Visual Effects, Computer Animation</p>
+				</div>
+			</div>
+			<div class="course">
+				<div class="course-image">
+					<img src="./resources/media/images/course-design.jpg" alt="Design with a camera">
+				</div>
+				<div class="course-text">
+					<h3>Design</h3>
+					<span class="light-text">COURSES</span>
+					<p class="light-text">User Experience Design, User Research, Visual Design</p>
+				</div>
+			</div>
+			<div class="course">
+				<div class="course-image">
+					<img src="./resources/media/images/course-data.jpg" alt="Data analysis on a laptop">
+				</div>
+				<div class="course-text">
+					<h3>Data</h3>
+					<span class="light-text">COURSES</span>
+					<p class="light-text">Data Science, Big Data, SQL, Data Visualization</p>
+				</div>
+			</div>
+			<div class="course">
+				<div class="course-image">
+					<img src="./resources/media/images/course-business.jpg" alt="Business concepts displayed on a chess board">
+				</div>
+				<div class="course-text">
+					<h3>Business</h3>
+					<span class="light-text">COURSES</span>
+					<p class="light-text">Product Development, Business Desvelopment, Startup</p>
+				</div>
+			</div>
+			<div class="course">
+				<div class="course-image">
+					<img src="./resources/media/images/course-marketing.jpg" alt="Marketing an apple watch">
+				</div>
+				<div class="course-text">
+					<h3>Marketing</h3>
+					<span class="light-text">COURSES</span>
+					<p class="light-text">Analytics, Content Marketing, Mobile Marketing</p>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<div class="courses-mobile">
+		<h2>Start Learning</h2>
+		<div class="course-mobile">
+			<span>Software Engineering</span>
+		</div>
+		<div class="course-mobile">
+			<span>Computer Art</span>
+		</div>
+		<div class="course-mobile">
+			<span>Design</span>
+		</div>
+		<div class="course-mobile">
+			<span>Data</span>
+		</div>
+		<div class="course-mobile">
+			<span>Business</span>
+		</div>
+		<div class="course-mobile">
+			<span>Marketing</span>
+		</div>
+	</div>
+
+	<!-- THESIS SECTION -->
+
+	<div class="thesis">
+		<div class="title">
+			<h2>Thesis Exhibits</h2>
+		</div>
+		<div class="thesis-content">
+			<div class="information-left large-img-container large-img-padding">
+				<div class="large-img-full-width">
+					<video controls>
+						<source src="./resources/media/video/thesis.mp4" type="video/mp4" alt="Your browser does not support the video tag!">
+					</video>
+				</div>
+
+				<div class="large-image-full-width information-left-content">
+					<h2>It doesn't hurt to keep practicing</h2>
+					<p class="text-padding light-text">"Ex feugait adipisci ocurreret nec, tantas tempor ei ius. Est alii persecuti pertinacia ne, ei vis civibus interesset. Vix congue oblique voluptua an, ei sea nibh dictas interesset. Ex sed audiam noluisse. Mel eu debet phaedrum. Ex feugait adipisci ocurreret nec, tantas tempor ei ius."</p>
+				</div>
+			</div>
+
+			<div class="information-sidebar">
+				<div class="info guest-lecture">
+					<div class="info-image small-img-padding border">
+						<img class="circle" src="./resources/media/images/thesis-fisma.jpg" alt="A photo of a guest lecturer">
+					</div>
+					<div class="info-text">
+						<h3>Fisma: Design and Prototype</h3>
+						<span class="light-text">Designer showcase of new prototype product</span>
+					</div>
+				</div>
+				<div class="info orientation">
+					<div class="info-image small-img-padding border">
+						<img class="circle" src="./resources/media/images/thesis-now-and-then.jpg" alt=" Poeple walking to orientation">
+					</div>
+					<div class="info-text">
+						<h3>Now and Then</h3>
+						<span class="light-text">Research study about New York</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+
+	<!-- FOOTER SECTION -->
+
+	<footer>
+		<div class="copyright">
+			<span>&copy; Colmar Academy. All rights reserved</span>
+		</div>
+		<div class="legal">
+			<span><a href="#">Terms</a></span>
+			<span><a href="#">Privacy</a></span>
+		</div>
+	</footer>
 </body>
 </html>
+
+
