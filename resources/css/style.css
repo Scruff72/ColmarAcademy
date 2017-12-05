@@ -4,6 +4,7 @@ html {
 
 body {
 	font-family: "Work Sans", sans-serif, arial;
+	line-height: 1.2;
 }
 
 /******************/
@@ -50,8 +51,22 @@ body {
 	border-radius: 5px;
 }
 
+/* Image height and with must be equal before appling the .circle class, otherwise use the .rounded-border class */
+
 .circle {
 	border-radius: 50%;
+}
+
+.bold {
+	font-weight: 900;
+}
+
+.flex-container {
+	display: flex;
+}
+
+.bg-color {
+	background-color: hsl(200, 66%, 89%);
 }
 
 @media only screen and (max-width: 500px) {
@@ -59,6 +74,7 @@ body {
 	.rounded-border {
 		border-radius: 0;
 	}
+
 }
 
 /******************/
@@ -75,7 +91,6 @@ header {
 }
 
 header .content {
-  display: flex;
   align-items: center;
   padding: 1rem;
 }
@@ -84,29 +99,27 @@ header .logo {
   flex: 1;
 }
 
-header nav ul {
-  display: flex;
-}
-
-nav li {
+header nav li {
   padding-left: 3.5rem;
 }
 
-nav a {
-  vertical-align: bottom;
+header nav a {
   line-height: 1.6;
-  font-size: 1rem;
   color: #4a4a4a;
 }
 
-header .icon {
-  width: 1rem;
-  padding-left: 1.5rem;
+header nav a:hover {
+	color: blue;
+	transition: color ease-out 750ms;
 }
 
 header .mobile {
   display: none;
 }
+ 
+/****************************/
+/*  RESPONSIVE HEADER PHONE */
+/****************************/
 
 @media only screen and (max-width: 760px) {
 
@@ -128,7 +141,6 @@ header .mobile {
   }
 
   header .mobile ul {
-    display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
@@ -137,6 +149,7 @@ header .mobile {
   header .mobile li {
     padding: 0;
   }
+
 }
 
 /******************/
@@ -145,12 +158,9 @@ header .mobile {
 
 .banner {
 	padding-top: 4rem;
-	display: flex;
-	background-color: rgb(216, 216, 216);
 }
 
 .banner-content {
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
@@ -168,7 +178,7 @@ header .mobile {
 }
 
 .banner-info p {
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	padding-top: 3rem;
 	padding-right: 3rem;
 	opacity: 0.6;
@@ -177,7 +187,6 @@ header .mobile {
 .start-here {
 	background-color: rgb(74, 74, 74);
 	text-align: center;
-	color: white;
 	padding: 1rem 0;
 	border-radius: 5px;
 	margin-top: 3.5rem;
@@ -192,6 +201,34 @@ header .mobile {
 	color: lawngreen;
 	transition: color ease-out 500ms;
 }
+
+
+/****************************/
+/* RESPONSIVE BANNER Tablet */
+/****************************/
+
+/*@media only screen and (min-width: 500px) and (max-width: 960px) {
+
+	.banner-info h1 {
+		font-size: 1.75rem;
+	}
+
+	.banner-info p {
+		display: none;
+	}
+
+	.banner-info {
+		padding-right: 2rem;
+	}
+
+	.start-here {
+		margin-top: 2rem;
+	}	
+}
+*/
+/***************************/
+/* RESPONSIVE BANNER PHONE */
+/***************************/
 
 @media only screen and (max-width: 500px) {
 
@@ -228,22 +265,18 @@ header .mobile {
 	.start-here {
 		width: 100%;
 	}
+
 }
 
 /***********************/
 /* INFORMATION SECTION */
 /***********************/
 
-.information {
-	display: flex;
-}
-
 .information-left {
 	border-right: 0.25px solid lightgrey;
 }
 
 .information-left-content {
-	display: flex;
 	flex-direction: column;
 	padding-top: 2rem;
 }
@@ -263,10 +296,6 @@ header .mobile {
 	margin-bottom: 2rem;
 }
 
-.info {
-	display: flex;
-}
-
 .info-image {
 	width: 35%;
 }
@@ -278,14 +307,14 @@ header .mobile {
 
 .info-text {
 	width: 65%;
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.info-text h3, .info-text span, .info-text a {
+.info-text h3, 
+.info-text span, 
+.info-text a {
 	padding: 0.5rem;
-	font-family: "Work Sans", "helvetica", serif;
 }
 
 .info-text h3 {
@@ -312,9 +341,33 @@ header .mobile {
 	margin-top: 1px;
 }
 
-.guest-lecture {
-	background-color: rgb(216, 216, 216);
-}
+
+/*****************************************/
+/* RESPONSIVE INFORMATION SECTION TABLET */
+/*****************************************/
+
+/*@media only screen and (min-width: 500px) and (max-width: 960px) {
+
+	.information-left-content h2 {
+		font-size: 1.75rem;
+	}
+
+	.information-sidebar .info {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.information .info-text h3, 
+	.information .info-text span, 
+	.information .info-text a {
+		text-align: center;
+	} 
+
+}*/
+
+/****************************************/
+/* RESPONSIVE INFORMATION SECTION PHONE */
+/****************************************/
 
 @media only screen and (max-width: 500px) {
 
@@ -328,7 +381,6 @@ header .mobile {
 	}
 
 	.info {
-		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
@@ -358,9 +410,7 @@ header .mobile {
 /*******************/
 
 .courses {
-	background-color: rgb(216, 216, 216);
 	padding: 0 4.5rem 4.5rem 4.5rem;
-	font-family: "Work Sans", "helvetica", serif
 }
 
 .courses h2 {
@@ -371,7 +421,6 @@ header .mobile {
 }
 
 .courses-cards {
-	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
 }
@@ -388,6 +437,8 @@ header .mobile {
 
 .course-image img {
 	max-width: 100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 .course-text {
 	text-align: left;
@@ -402,6 +453,10 @@ header .mobile {
 	font-weight: bold;
 	font-size: 1.5rem;
 }
+
+/************************************/
+/* RESPONSIVE COURSES SECTION PHONE */
+/************************************/
 
 @media only screen and (max-width: 500px) {
 
@@ -426,7 +481,6 @@ header .mobile {
 	.courses-mobile div {
 		margin: 0.5rem 0;
 		padding: 1rem 1rem 1.5rem 1rem;
-		background-color: rgb(216, 216, 216);
 		border-radius: 5px;
 	}
 
@@ -455,7 +509,6 @@ header .mobile {
 }
 
 .thesis {
-	display: flex;
 	flex-direction: column;
 	background-color: white;
 }
@@ -475,17 +528,13 @@ header .mobile {
 	padding: 2rem 0;
 }
 
-.thesis-content {
-	display: flex;
-}
-
 .thesis .information-sidebar {
 	padding-top: 2rem;
 }
 
-.thesis-sidebar .info {
-	border-left: none;
-}
+/***********************************/
+/* RESPONSIVE THESIS SECTION PHONE */
+/***********************************/
 
 @media only screen and (max-width: 500px) {
 
@@ -522,7 +571,6 @@ header .mobile {
 /******************/
 
 footer {
-	display: flex;
 	justify-content: space-between;
 	padding: 1rem 1.5rem;
 }
@@ -535,6 +583,15 @@ footer {
 	color: black;
 	padding: 1rem;
 }
+
+.legal span a:hover {
+	color: blue;
+	transition: color ease-out 750ms;
+}
+
+/***************************/
+/* RESPONSOVE FOOTER PHONE */
+/***************************/
 
 @media only screen and (max-width: 500px) {
 
