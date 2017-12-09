@@ -1,3 +1,5 @@
+/* Note: Transitions included in the @media rules would not normally apply, They are there for demonstration purposes only. */
+
 html {
 	font-size: 16px;
 }
@@ -51,7 +53,7 @@ body {
 	border-radius: 5px;
 }
 
-/* Image height and with must be equal before appling the .circle class, otherwise use the .rounded-border class */
+/* To use the .circle class, Ensure images are equal height and width otherwise it will not be a prefect circle.  */
 
 .circle {
 	border-radius: 50%;
@@ -62,12 +64,38 @@ body {
 }
 
 .flex-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
 .bg-color {
 	background-color: hsl(200, 66%, 89%);
 }
+
+
+/************************************/
+/* RESPONSIVE GENERIC STYLES TABLET */
+/************************************/
+
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+
+	.large-img-padding{
+		padding: 0;
+	}
+
+	.large-img-container {
+		width: 100%;
+	}
+
+	.small-img-container {
+		width: 100%;
+	}
+}
+
+/**********************************/
+/* RESPONSIVE GENERIC STYLES PHONE*/
+/**********************************/
 
 @media only screen and (max-width: 500px) {
 
@@ -77,44 +105,51 @@ body {
 
 }
 
+
 /******************/
 /* HEADER SECTION */
 /******************/
 
 header {
-  position: fixed;
-  width: 100%;
-  border-bottom: solid 1px #c6c1c1;
-  background-color: white;
-  z-index: 1;
-  height: 4rem;
+	position: fixed;
+	width: 100%;
+	border-bottom: solid 1px #c6c1c1;
+	background-color: white;
+	z-index: 1;
+	height: 4rem;
 }
 
 header .content {
-  align-items: center;
-  padding: 1rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 header .logo {
-  flex: 1;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 header nav li {
-  padding-left: 3.5rem;
+    padding-left: 3.5rem;
 }
 
 header nav a {
-  line-height: 1.6;
-  color: #4a4a4a;
+    line-height: 1.6;
+    color: #4a4a4a;
 }
 
 header nav a:hover {
 	color: blue;
+	-webkit-transition: color ease-out 750ms;
 	transition: color ease-out 750ms;
 }
 
 header .mobile {
-  display: none;
+    display: none;
 }
  
 /****************************/
@@ -141,7 +176,11 @@ header .mobile {
   }
 
   header .mobile ul {
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
     width: 100%;
   }
@@ -161,8 +200,16 @@ header .mobile {
 }
 
 .banner-content {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	-ms-grid-row-align: flex-start;
 	align-items: flex-start;
 }
 
@@ -199,33 +246,49 @@ header .mobile {
 
 .start-here span a:hover {
 	color: lawngreen;
+	-webkit-transition: color ease-out 500ms;
 	transition: color ease-out 500ms;
 }
 
 
 /****************************/
-/* RESPONSIVE BANNER Tablet */
+/* RESPONSIVE BANNER TABLET */
 /****************************/
 
-/*@media only screen and (min-width: 500px) and (max-width: 960px) {
-
-	.banner-info h1 {
-		font-size: 1.75rem;
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+	
+	.banner {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
 	}
 
-	.banner-info p {
-		display: none;
+	.rounded-border {
+		border-radius: 0;
+	}
+
+	.banner-content {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-ms-grid-row-align: center;
+		align-items: center;
 	}
 
 	.banner-info {
-		padding-right: 2rem;
+		text-align: center;
+		padding: 2.5rem 0 3.5rem 0;
 	}
 
-	.start-here {
-		margin-top: 2rem;
-	}	
 }
-*/
+
 /***************************/
 /* RESPONSIVE BANNER PHONE */
 /***************************/
@@ -259,6 +322,9 @@ header .mobile {
 	}
 
 	.banner {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 	}
 
@@ -277,6 +343,9 @@ header .mobile {
 }
 
 .information-left-content {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	padding-top: 2rem;
 }
@@ -307,7 +376,12 @@ header .mobile {
 
 .info-text {
 	width: 65%;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -328,6 +402,7 @@ header .mobile {
 	border: 1px solid white;
 	color: white;
 	border-radius: 5px;
+	-webkit-transition: background-color ease-out 500ms, color ease-out 1s;
 	transition: background-color ease-out 500ms, color ease-out 1s;
 }
 
@@ -346,24 +421,37 @@ header .mobile {
 /* RESPONSIVE INFORMATION SECTION TABLET */
 /*****************************************/
 
-/*@media only screen and (min-width: 500px) and (max-width: 960px) {
-
-	.information-left-content h2 {
-		font-size: 1.75rem;
-	}
-
-	.information-sidebar .info {
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+	
+	.information {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
-		align-items: center;
 	}
 
-	.information .info-text h3, 
-	.information .info-text span, 
-	.information .info-text a {
+	.information-left-content {
 		text-align: center;
-	} 
+	}
 
-}*/
+	.information-sidebar {
+		width: 100%;
+	}
+
+	.info {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-ms-grid-row-align: center;
+		align-items: center;
+		text-align: center;
+		padding: 3rem 0 3rem 0;
+	}
+
+}
 
 /****************************************/
 /* RESPONSIVE INFORMATION SECTION PHONE */
@@ -381,7 +469,13 @@ header .mobile {
 	}
 
 	.info {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-ms-grid-row-align: center;
 		align-items: center;
 		text-align: center;
 		padding-top: 3rem;
@@ -393,6 +487,7 @@ header .mobile {
 		border: none;
 		color: blue;
 		border-radius: 0;
+		-webkit-transition: color ease-out 500ms;
 		transition: color ease-out 500ms;
 	}
 
@@ -421,7 +516,9 @@ header .mobile {
 }
 
 .courses-cards {
+	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
+	-ms-flex-pack: distribute;
 	justify-content: space-around;
 }
 
@@ -454,6 +551,34 @@ header .mobile {
 	font-size: 1.5rem;
 }
 
+/*************************************/
+/* RESPONSIVE COURSES SECTION TABLET */
+/*************************************/
+
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+	
+	.course {
+		width: 40%;
+		border-radius: 0;
+	}
+
+	.course-image img {
+		max-width: 100%;
+		height: auto;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+	}
+
+	.course h3 {
+		font-size: 1.1rem;
+	}
+
+	.course-text span, .course-text p {
+		font-size: 0.9rem;
+	}
+
+}
+
 /************************************/
 /* RESPONSIVE COURSES SECTION PHONE */
 /************************************/
@@ -472,7 +597,12 @@ header .mobile {
 	}
 
 	.courses-mobile {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 		padding: 1rem;
 		text-align: left; 
@@ -493,7 +623,7 @@ header .mobile {
 	.courses-mobile div:hover {
 		background-color: royalblue;
 		color: white;
-		/* This hover transition will only work when viewed on a desktop with the screen minimised to < 500px*/
+		-webkit-transition: background-color ease-out 500ms, color ease-out 500ms;
 		transition: background-color ease-out 500ms, color ease-out 500ms;
 	}
 }
@@ -509,6 +639,9 @@ header .mobile {
 }
 
 .thesis {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	background-color: white;
 }
@@ -532,11 +665,11 @@ header .mobile {
 	padding-top: 2rem;
 }
 
-/***********************************/
-/* RESPONSIVE THESIS SECTION PHONE */
-/***********************************/
+/********************************************/
+/* RESPONSIVE THESIS SECTION PHONE + TABLET */
+/********************************************/
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1024px) {
 
 	.thesis .information-sidebar {
 		display: none;
@@ -571,6 +704,8 @@ header .mobile {
 /******************/
 
 footer {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding: 1rem 1.5rem;
 }
@@ -586,6 +721,7 @@ footer {
 
 .legal span a:hover {
 	color: blue;
+	-webkit-transition: color ease-out 750ms;
 	transition: color ease-out 750ms;
 }
 
@@ -593,7 +729,7 @@ footer {
 /* RESPONSOVE FOOTER PHONE */
 /***************************/
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1024px) {
 
 	footer .legal {
 		display: none;
