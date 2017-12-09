@@ -7,29 +7,30 @@
 	<link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="icon" href="./resources/media/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
 	<!-- HEADER SECTION -->
 	
-	<header>
+	<header role="menubar">
     	<div class="content flex-container">
-	      	<a href="index.html" class="desktop"><img src="./resources/media/images/ic-logo.svg" alt="Colmar Academy Logo"></a>
-	      	<span class="bold">COLMAR</span><span class="logo">ACADEMY</span>
-	      	<nav class="desktop">
-	        	<ul class="flex-container">
-	          		<li><a class="text-color" href="#">On Campus</a></li>
-					<li><a class="text-color" href="#">Online</a></li>
-					<li><a class="text-color" href="#">For Companies</a></li>
-					<li><a class="text-color" href="#">Sign in</a></li>
+	      	<a href="index.html" class="desktop"><img role="img" src="./resources/media/images/ic-logo.svg" alt="Colmar Academy Logo"></a>
+	      	<span aria-label="Colmar Academy" class="bold">COLMAR</span><span class="logo">ACADEMY</span>
+	      	<nav role="navigation" class="desktop">
+	        	<ul role="presentation" class="flex-container">
+	          		<li><a role="link" class="text-color" href="#">On Campus</a></li>
+					<li><a role="link" class="text-color" href="#">Online</a></li>
+					<li><a role="link" class="text-color" href="#">For Companies</a></li>
+					<li><a role="link" class="text-color" href="#">Sign in</a></li>
 	        	</ul>
 	      	</nav>
 	      	<nav class="mobile">
-		        <ul class="flex-container">
-		        	<li><a href="index.html"><img src="./resources/media/images/ic-logo.svg" alt="Colmar Academy Logo"></a></li>
-		          	<li><a href="#"><img src="./resources/media/images/ic-on-campus.svg"></a></li>
-		          	<li><a href="#"><img src="./resources/media/images/ic-online.svg"></a></li>
-		          	<li><a href="#"><img src="./resources/media/images/ic-login.svg"></a></li>
+		        <ul role="presentation" class="flex-container">
+		        	<li><a role="link" href="index.html"><img role="img" src="./resources/media/images/ic-logo.svg" alt="Colmar Academy Logo"></a></li>
+		          	<li><a role="link" href="#"><img role="img" src="./resources/media/images/ic-on-campus.svg"></a></li>
+		          	<li><a role="link" href="#"><img role="img" src="./resources/media/images/ic-online.svg"></a></li>
+		          	<li><a role="link" href="#"><img role="img" src="./resources/media/images/ic-login.svg"></a></li>
 		        </ul>
 	      	</nav>
     	</div>
@@ -37,16 +38,16 @@
 
   	<!-- BANNER SECTION -->
 
-  	<div class="banner bg-color flex-container">
+  	<div class="banner bg-color flex-container" role="banner">
 		<div class="large-img-container large-img-padding">
-			<img class="large-img-full-width rounded-border" src="./resources/media/images/banner.jpg" alt="A picture of people studying together on an outdoor table">
+			<img  role="img" class="large-img-full-width rounded-border" src="./resources/media/images/banner.jpg" alt="A picture of people studying together on an outdoor table">
 		</div>
 		<div class="banner-content small-img-container flex-container">
 			<div class="banner-info">
 				<h1>Learn something <br>new everyday</h1>
 				<p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p>
 				<div class="start-here">
-					<span><a href="#">Start here</a></span>
+					<span><a role="link" href="#">Start here</a></span>
 				</div>
 			</div>
 		</div>
@@ -57,11 +58,11 @@
 	<div class="information flex-container">
 		<div class="information-left large-img-container large-img-padding">
 			<div class="large-img-full-width">
-				<img class="large-img-full-width rounded-border" src="./resources/media/images/information-main.jpg" alt="A picture of a guy smiling while reading">
+				<img role="img" class="large-img-full-width rounded-border" src="./resources/media/images/information-main.jpg" alt="A picture of a guy smiling while reading">
 			</div>
 
 			<div class="large-image-full-width information-left-content flex-container">
-				<h2>It doesn't hurt to keep practicing</h2>
+				<h2 role="heading">It doesn't hurt to keep practicing</h2>
 				<p class="text-padding light-text">"Ex feugait adipisci ocurreret nec, tantas tempor ei ius. Est alii persecuti pertinacia ne, ei vis civibus interesset. Vix congue oblique voluptua an, ei sea nibh dictas interesset. Ex sed audiam noluisse. Mel eu debet phaedrum. Ex feugait adipisci ocurreret nec, tantas tempor ei ius."</p>
 				<span class="light-text">Emanuel, Sir Strategist at Hiring.com</span>
 			</div>
@@ -72,32 +73,32 @@
 		<div class="information-sidebar">
 			<div class="info orientation flex-container">
 				<div class="info-image small-img-padding border">
-					<img class="circle" src="./resources/media/images/information-orientation.jpg" alt=" Poeple walking to orientation">
+					<img role="img" class="circle" src="./resources/media/images/information-orientation.jpg" alt=" Poeple walking to orientation">
 				</div>
 				<div class="info-text flex-container">
-					<h3>Orientation Date</h3>
+					<h3 role="heading">Orientation Date</h3>
 					<span class="light-text">Tue 10/11 &amp; Wed 10/12: 8am-3pm</span>
-					<a href="#" class="light-text">Read more</a>
+					<a role="link" href="#" class="light-text">Read more</a>
 				</div>
 			</div>
 			<div class="info campus flex-container">
 				<div class="info-image small-img-padding border">
-					<img class="circle" src="./resources/media/images/information-campus.jpg" alt="Students studying on campus">
+					<img role="img" class="circle" src="./resources/media/images/information-campus.jpg" alt="Students studying on campus">
 				</div>
 				<div class="info-text flex-container">
-					<h3>Our Campus</h3>
+					<h3 role="heading">Our Campus</h3>
 					<span class="light-text">Find which campus is close by you</span>
-					<a href="#" class="light-text">Read more</a>
+					<a role="link" href="#" class="light-text">Read more</a>
 				</div>
 			</div>
 			<div class="info guest-lecture flex-container bg-color">
 				<div class="info-image small-img-padding border">
-					<img class="circle" src="./resources/media/images/information-guest-lecture.jpg" alt="A photo of a guest lecturer">
+					<img role="img" class="circle" src="./resources/media/images/information-guest-lecture.jpg" alt="A photo of a guest lecturer">
 				</div>
 				<div class="info-text flex-container">
-					<h3>Our Guest Lecture</h3>
+					<h3 role="heading">Our Guest Lecture</h3>
 					<span class="light-text">Join a keynote with Oliver Slack about music in medical treatment</span>
-					<a href="#" class="light-text">Read more</a>
+					<a role="link" href="#" class="light-text">Read more</a>
 				</div>
 			</div>
 		</div>	
@@ -106,64 +107,64 @@
 	<!-- COURSES SECTION -->
 
 	<div class="courses bg-color">
-		<h2>Start Learning</h2>
+		<h2 role="heading">Start Learning</h2>
 		<div class="courses-cards flex-container">
 			<div class="course rounded-border">
 				<div class="course-image">
-					<img src="./resources/media/images/course-software.jpg" alt="A computer used for software engineering">
+					<img role="img" src="./resources/media/images/course-software.jpg" alt="A computer used for software engineering">
 				</div>
 				<div class="course-text">
-					<h3>Software Engineering</h3>
+					<h3 role="heading">Software Engineering</h3>
 					<span class="light-text">COURSES</span>
 					<p class="light-text">Web Development, Mobile Development, iOT, API's</p>
 				</div>
 			</div>
 			<div class="course rounded-border">
 				<div class="course-image">
-					<img src="./resources/media/images/course-computer-art.jpg" alt="An image of a phone representing computer art">
+					<img role="img" src="./resources/media/images/course-computer-art.jpg" alt="An image of a phone representing computer art">
 				</div>
 				<div class="course-text">
-					<h3>Computer Art</h3>
+					<h3 role="heading">Computer Art</h3>
 					<span class="light-text">COURSES</span>
 					<p class="light-text">Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
 				</div>
 			</div>
 			<div class="course rounded-border">
 				<div class="course-image">
-					<img src="./resources/media/images/course-design.jpg" alt="Design with a camera">
+					<img role="img" src="./resources/media/images/course-design.jpg" alt="Design with a camera">
 				</div>
 				<div class="course-text">
-					<h3>Design</h3>
+					<h3 role="heading">Design</h3>
 					<span class="light-text">COURSES</span>
 					<p class="light-text">User Experience Design, User Research, Visual Design</p>
 				</div>
 			</div>
 			<div class="course rounded-border">
 				<div class="course-image">
-					<img src="./resources/media/images/course-data.jpg" alt="Data analysis on a laptop">
+					<img role="img" src="./resources/media/images/course-data.jpg" alt="Data analysis on a laptop">
 				</div>
 				<div class="course-text">
-					<h3>Data</h3>
+					<h3 role="heading">Data</h3>
 					<span class="light-text">COURSES</span>
 					<p class="light-text">Data Science, Big Data, SQL, Data Visualization</p>
 				</div>
 			</div>
 			<div class="course rounded-border">
 				<div class="course-image">
-					<img src="./resources/media/images/course-business.jpg" alt="Business concepts displayed on a chess board">
+					<img role="img" src="./resources/media/images/course-business.jpg" alt="Business concepts displayed on a chess board">
 				</div>
 				<div class="course-text">
-					<h3>Business</h3>
+					<h3 role="heading">Business</h3>
 					<span class="light-text">COURSES</span>
 					<p class="light-text">Product Development, Business Desvelopment, Startup</p>
 				</div>
 			</div>
 			<div class="course rounded-border">
 				<div class="course-image">
-					<img src="./resources/media/images/course-marketing.jpg" alt="Marketing an apple watch">
+					<img role="img" src="./resources/media/images/course-marketing.jpg" alt="Marketing an apple watch">
 				</div>
 				<div class="course-text">
-					<h3>Marketing</h3>
+					<h3 role="heading">Marketing</h3>
 					<span class="light-text">COURSES</span>
 					<p class="light-text">Analytics, Content Marketing, Mobile Marketing</p>
 				</div>
@@ -174,7 +175,7 @@
 	<!-- RESPONSIVE COURSES SECTION -->
 
 	<div class="courses-mobile">
-		<h2>Start Learning</h2>
+		<h2 role="heading">Start Learning</h2>
 		<div class="course-mobile bg-color">
 			<span>Software Engineering</span>
 		</div>
@@ -199,7 +200,7 @@
 
 	<div class="thesis flex-container">
 		<div class="title">
-			<h2>Thesis Exhibit</h2>
+			<h2 role="heading">Thesis Exhibit</h2>
 		</div>
 		<div class="thesis-content flex-container">
 			<div class="information-left large-img-container large-img-padding">
@@ -211,7 +212,7 @@
 				</div>
 
 				<div class="large-image-full-width information-left-content">
-					<h2>Re-Imagine Urban</h2>
+					<h2 role="heading">Re-Imagine Urban</h2>
 					<p class="text-padding light-text">"Ex feugait adipisci ocurreret nec, tantas tempor ei ius. Est alii persecuti pertinacia ne, ei vis civibus interesset. Vix congue oblique voluptua an, ei sea nibh dictas interesset. Ex sed audiam noluisse. Mel eu debet phaedrum. Ex feugait adipisci ocurreret nec, tantas tempor ei ius."</p>
 				</div>
 			</div>
@@ -221,19 +222,19 @@
 			<div class="information-sidebar">
 				<div class="info guest-lecture flex-container bg-color">
 					<div class="info-image small-img-padding border">
-						<img class="circle" src="./resources/media/images/thesis-fisma.jpg" alt="Design and prototype sketches">
+						<img role="img" class="circle" src="./resources/media/images/thesis-fisma.jpg" alt="Design and prototype sketches">
 					</div>
 					<div class="info-text flex-container">
-						<h3>Fisma: Design and Prototype</h3>
+						<h3 role="heading">Fisma: Design and Prototype</h3>
 						<span class="light-text">Designer showcase of new prototype product</span>
 					</div>
 				</div>
 				<div class="info orientation flex-container">
 					<div class="info-image small-img-padding border">
-						<img class="circle" src="./resources/media/images/thesis-now-and-then.jpg" alt="A Photo of New York">
+						<img role="img" class="circle" src="./resources/media/images/thesis-now-and-then.jpg" alt="A Photo of New York">
 					</div>
 					<div class="info-text flex-container">
-						<h3>Now and Then</h3>
+						<h3 role="heading">Now and Then</h3>
 						<span class="light-text">Research study about New York</span>
 					</div>
 				</div>
@@ -248,10 +249,10 @@
 		<div class="copyright">
 			<span>&copy; Colmar Academy. All rights reserved.</span>
 		</div>
-		<div class="legal">
-			<span><a href="#">Terms</a></span>
-			<span><a href="#">Privacy</a></span>
-		</div>
+		<nav role="navigation" class="legal">
+			<span><a role="link" href="#">Terms</a></span>
+			<span><a role="link" href="#">Privacy</a></span>
+		</nav>
 	</footer>
 </body>
 </html>
